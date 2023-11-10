@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Am from '../assets/Am.jpg';
 import Em from '../assets/Em.jpg';
 import Omi from '../assets/Omi.jpg';
+import Am from '../assets/am.jpg';
 import Layout from '../components/Layout';
 import styles from '../styles/contactUs.module.css';
 
