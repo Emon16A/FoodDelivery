@@ -1,8 +1,10 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Layout from '../components/Layout';
 import styles from '../styles/contactUs.module.css';
 import Am from "/pages/Am.jpg";
 import Em from "/pages/Em.jpg";
+
 
 const ContactUs = () => {
   return (
@@ -18,17 +20,17 @@ const ContactUs = () => {
       </div>
       <div className={styles.photoContainer}>
         <div className={styles.photo}>
-          <img src={Am.src} alt="Photo 1" />
+          <Image src={Am.src} alt="Photo 1" />
           <p>Name: Amena Akter </p>
           <p>ID: 20215103081</p>
         </div>
         <div className={styles.photo}>
-          <img src={Em.src} alt="Photo 2" />
+          <Image src={Em.src} alt="Photo 2" />
           <p>Name: S.I.Emon </p>
           <p>20215103081</p>
         </div>
         <div className={styles.photo}>
-          <img src="url_to_your_image_3" alt="Photo 3" />
+          <Image src="url_to_your_image_3" alt="Photo 3" />
           <p>Name: Tasmim Ome</p>
           <p>ID: 20215103072</p>
         </div>
