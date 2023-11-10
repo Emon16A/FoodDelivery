@@ -1,12 +1,6 @@
-import Layout from '../components/Layout';
-
-
-const ContactUs = () => {
+import ContactUs from '../components/ContactUs';
+export default function ContactPage() {
   return (
-    <Layout>
-   
-    </Layout>
+      <ContactUs />
   );
-};
-
-export default ContactUs;
+}
