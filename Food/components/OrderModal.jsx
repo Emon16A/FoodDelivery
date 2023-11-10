@@ -2,7 +2,7 @@ import { Modal, useMantineTheme } from "@mantine/core";
 import { useRouter } from 'next/router';
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { createOrder } from "../lib/orderhandler";
+import { createOrder } from "../lib/orderHandler";
 import { useStore } from "../store/store";
 import css from "../styles/OrderModel.module.css";
 

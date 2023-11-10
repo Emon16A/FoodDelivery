@@ -1,9 +1,9 @@
 import Head from 'next/head';
+import Am from "../assets/Am.jpg";
+import Em from "../assets/Em.jpg";
+import Omi from "../assets/Omi.jpg";
 import Layout from '../components/Layout';
 import styles from '../styles/contactUs.module.css';
-import Am from "/pages/Am.jpg";
-import Em from "/pages/Em.jpg";
-import Omi from "/pages/Omi.jpg";
 
 
 const ContactUs = () => {
