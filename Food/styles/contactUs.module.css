@@ -36,7 +36,7 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  transition: transform 0.3s ease-in-out; /* Adding transition for a smooth hover effect */
+  transition: transform 0.3s ease-in-out; 
 }
 
 .photo img {
@@ -50,7 +50,7 @@
 }
 
 .photo:hover {
-  transform: scale(1.05); /* Change the scale factor as per your preference */
+  transform: scale(1.05); /* */
 }
 
 .formContainer {
