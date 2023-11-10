@@ -23,14 +23,9 @@
 
 .photoContainer {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   margin-top: 20px;
 }
-
-/* contactUs.module.css */
-
-/* ... (previously defined styles) */
-
 .photo {
   width: 200px;
   padding: 10px;

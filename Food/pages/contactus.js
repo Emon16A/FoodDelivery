@@ -3,6 +3,8 @@ import Layout from '../components/Layout';
 import styles from '../styles/contactUs.module.css';
 import Am from "/pages/Am.jpg";
 import Em from "/pages/Em.jpg";
+import Omi from "/pages/Omi.jpg";
+
 
 const ContactUs = () => {
   return (
@@ -28,7 +30,7 @@ const ContactUs = () => {
             <p>ID: 20215103081</p>
           </div>
           <div className={styles.photo}>
-            <img src="url_to_your_image_3" alt="Photo 3" width={150} height={150} />
+            <img src={Omi.src} alt="Photo 3" width={150} height={150} />
             <p>Name: Tasmim Ome</p>
             <p>ID: 20215103072</p>
           </div>
