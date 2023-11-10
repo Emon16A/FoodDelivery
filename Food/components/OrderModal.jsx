@@ -6,9 +6,7 @@ import { createOrder } from "../lib/orderhandler";
 import { useStore } from "../store/store";
 import css from "../styles/OrderModel.module.css";
 
-
-
-export default function ({ opened, setOpened, PaymentMethod }) {
+function OrderModal({ opened, setOpened, PaymentMethod }) {
   const theme = useMantineTheme();
   const router = useRouter();
 
@@ -32,6 +30,7 @@ export default function ({ opened, setOpened, PaymentMethod }) {
     }
     router.push(`/order/${id}`)
   };
+
   return (
     <Modal
       overlayColor={
@@ -59,7 +58,7 @@ export default function ({ opened, setOpened, PaymentMethod }) {
           required
           placeholder="Phone Number"
         />
-        Only available if your area have a Branch
+        Only available if your area has a Branch
         <textarea
           onChange={handleInput}
           name="address"
@@ -79,3 +78,7 @@ export default function ({ opened, setOpened, PaymentMethod }) {
     </Modal>
   );
 }
+
+OrderModal.displayName = 'OrderModal';
+
+export default OrderModal;

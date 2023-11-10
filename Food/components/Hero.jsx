@@ -21,12 +21,15 @@ export default function Hero() {
             Your <span style={{ color: "var(--themeRed)" }}>Food</span>
           </span>
         </div>
-        <span className={css.miniText}>
-          "Our mission is to satisfy your cravings with delectable cuisine, all
-          delivered promptly to your doorstep.
-          <br />
-          Enjoy free delivery when you place an order totaling TK.1000 or more."
-        </span>
+     
+<span className={css.miniText}>
+  &quot;Our mission is to satisfy your cravings with delectable cuisine, all
+  delivered promptly to your doorstep.
+  <br />
+  Enjoy free delivery when you place an order totaling TK.1000 or more.&quot;
+</span>
+
+
         <button className={`btn ${css.btn}`}>Get Started</button>
       </div>
 
@@ -49,7 +52,8 @@ export default function Hero() {
             <span>Italian Pizza Large</span>
 
             <span>
-                <span style={{color: "var(--themeRed)"}}>TK. </span>599</span>
+              <span style={{ color: "var(--themeRed)" }}>TK. </span>599
+            </span>
           </div>
         </div>
       </div>
