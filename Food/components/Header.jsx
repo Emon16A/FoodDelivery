@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <div className={css.header}>
       {/*Logo */}
-      <Link href="http://localhost:3000/">
+      <Link href="../">
       <div className={css.logo}>
         <Image src={Logo} alt="" width={50} height={50} />
         <span>Food</span>
