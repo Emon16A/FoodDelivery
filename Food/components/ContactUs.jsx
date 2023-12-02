@@ -39,7 +39,7 @@ const ContactUs = () => {
             scrolling="no"
             marginHeight="0"
             marginWidth="0"
-            src="https://www.google.com/maps/embed/v1/place?q=Bangladesh+University+of+Business+and+Technology,+Plot+77-78,+2+Road-9,+Dhaka+1216&key=AIzaSyDbzvRjVC7KQxyqQyWOaGZi7NyXKW-yt08"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.224561674789!2d90.41270831548117!3d23.806348084563325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c71f69fc1997%3A0x40e3e388686a035!2sBangladesh%20University%20of%20Business%20and%20Technology%20(BUBT)!5e0!3m2!1sen!2sus!4v1666016030478!5m2!1sen!2sus"
             allowFullScreen
             title="Google Map"
           ></iframe>
