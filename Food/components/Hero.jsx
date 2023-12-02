@@ -31,10 +31,12 @@ export default function Hero() {
 </span>
 
 
+        <li>
         <Link href="/menu">
         <button className={`btn ${css.btn}`}>Get Started
         </button>
         </Link>
+        </li>
       </div>
 
       {/* right side */}
