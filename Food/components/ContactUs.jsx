@@ -21,14 +21,27 @@ const ContactUs = () => {
           <div className={styles.photo}>
             <Image src={Am} alt="Photo 1" width={200} height={200} />
             <p>Name: Amena Akter</p>
-            <p>ID: 20215103081</p>
+            <p>Designation  :   Project Manager</p>
           </div>
           <div className={styles.photo}>
             <Image src={Em} alt="Photo 2" width={200} height={200} />
             <p>Name: S.I.Emon</p>
-            <p>ID: 20215103061</p>
+            <p>Designation : Asst. Project Manager</p>
           </div>
          
+          <div className={styles.photo}>
+            <Image src={Em} alt=" " width={200} height={200} />
+            <p>Name: Nadia Sultana Lamia</p>
+            <p>Designation : Team Member</p>
+          </div>
+
+          <div className={styles.photo}>
+            <Image src={Em} alt=" " width={200} height={200} />
+            <p>Name: Mahin Ul Amin</p>
+            <p>Designation : Team Member</p>
+          </div>
+
+
         </div>
         <div className={styles.formContainer}>
           <form>
