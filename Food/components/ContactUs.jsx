@@ -14,7 +14,6 @@ const ContactUs = () => {
         <h1 className={styles.title} style={{ textAlign: 'center' }}>Contact Us</h1>
           <p className={styles.description}>Get in touch with us for any queries or feedback.</p>
           <div className={styles.note}>
-            <p>Behind this Project</p>
           </div>
           <form>
             <div>
@@ -40,7 +39,7 @@ const ContactUs = () => {
             scrolling="no"
             marginHeight="0"
             marginWidth="0"
-            src="https://www.google.com/maps/embed/v1/place?q=Bangladesh+University+of+Business+and+Technology,+Plot+77-78,+2+Road-9,+Dhaka+1216&key=AIzaSyCD5H1zOIIgFTPwY2TfG77AV46zEQqQNxY"
+            src="https://www.google.com/maps/embed/v1/place?q=Bangladesh+University+of+Business+and+Technology,+Plot+77-78,+2+Road-9,+Dhaka+1216&key=AIzaSyDbzvRjVC7KQxyqQyWOaGZi7NyXKW-yt08"
             allowFullScreen
             title="Google Map"
           ></iframe>
