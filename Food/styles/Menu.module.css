@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    align-items: center;
+
     justify-content: flex-start;
 
 }
