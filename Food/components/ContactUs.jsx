@@ -40,7 +40,7 @@ const ContactUs = () => {
             scrolling="no"
             marginHeight="0"
             marginWidth="0"
-            src="https://www.google.com/maps/embed/v1/place?q=Bangladesh+University+of+Business+and+Technology,+Plot+77-78,+2+Road-9,+Dhaka+1216&key=AIzaSyAJ2yPXTikGr9pGPPjqEDmlDarg9fEIVR4"
+            src="https://www.google.com/maps/embed/v1/place?q=Bangladesh+University+of+Business+and+Technology,+Plot+77-78,+2+Road-9,+Dhaka+1216&key=AIzaSyCD5H1zOIIgFTPwY2TfG77AV46zEQqQNxY"
             allowFullScreen
             title="Google Map"
           ></iframe>
