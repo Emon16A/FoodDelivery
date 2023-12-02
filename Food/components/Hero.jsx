@@ -39,7 +39,6 @@ export default function Hero() {
         </li>
       </div>
 
-      {/* right side */}
       <div className={css.right}>
         <div className={css.imageContainer}>
           <Image src={HeroImage} alt="" layout="intrinsic" />
@@ -59,7 +58,12 @@ export default function Hero() {
             <Image src={Pizzal} alt="" objectFit="cover" layout="intrinsic" />
           </div>
           <div className={css.details}>
-            <span>Italian Pizza Large</span>
+            <li>
+              <Link href="/menu">
+              <span>Italian Pizza Large</span>
+
+              </Link>
+            </li>
 
             <span>
               <span style={{ color: "var(--themeRed)" }}>TK. </span>599
