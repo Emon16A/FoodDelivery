@@ -1,5 +1,6 @@
 import { UilPhone } from "@iconscout/react-unicons";
 import Image from "next/legacy/image";
+import Link from "next/link";
 import Cherry from "../assets/Cherry.png";
 import HeroImage from "../assets/HeroImage.png";
 import Pizzal from "../assets/p1.jpg";
@@ -30,7 +31,10 @@ export default function Hero() {
 </span>
 
 
-        <button className={`btn ${css.btn}`}>Get Started</button>
+        <Link href="/menu">
+        <button className={`btn ${css.btn}`}>Get Started
+        </button>
+        </Link>
       </div>
 
       {/* right side */}
@@ -39,7 +43,9 @@ export default function Hero() {
           <Image src={HeroImage} alt="" layout="intrinsic" />
         </div>
         <div className={css.ContactUs}>
+          <Link href='/contactus'>
           <span>Contact Us</span>
+          </Link>
           <div>
             <UilPhone color="white" />
           </div>

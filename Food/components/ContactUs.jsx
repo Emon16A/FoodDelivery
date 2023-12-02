@@ -1,7 +1,5 @@
+// ContactUs.js
 import Head from 'next/head';
-import Image from 'next/image';
-import Em from '../assets/Em.jpg';
-import Am from '../assets/am.jpg';
 import Layout from '../components/Layout';
 import styles from '../styles/contactUs.module.css';
 
@@ -12,38 +10,12 @@ const ContactUs = () => {
         <Head>
           <title>Contact Us</title>
         </Head>
-        <h1 className={styles.title}>Contact Us</h1>
-        <p className={styles.description}>Get in touch with us for any queries or feedback.</p>
-        <div className={styles.note}>
-          <p>Behind this Project</p>
-        </div>
-        <div className={styles.photoContainer}>
-          <div className={styles.photo}>
-            <Image src={Am} alt="Photo 1" width={200} height={200} />
-            <p>Name: Amena Akter</p>
-            <p>Designation  :   Project Manager</p>
-          </div>
-          <div className={styles.photo}>
-            <Image src={Em} alt="Photo 2" width={200} height={200} />
-            <p>Name: S.I.Emon</p>
-            <p>Designation : Asst. Project Manager</p>
-          </div>
-         
-          <div className={styles.photo}>
-            <Image src={Em} alt=" " width={200} height={200} />
-            <p>Name: Nadia Sultana Lamia</p>
-            <p>Designation : Team Member</p>
-          </div>
-
-          <div className={styles.photo}>
-            <Image src={Em} alt=" " width={200} height={200} />
-            <p>Name: Mahin Ul Amin</p>
-            <p>Designation : Team Member</p>
-          </div>
-
-
-        </div>
         <div className={styles.formContainer}>
+        <h1 className={styles.title} style={{ textAlign: 'center' }}>Contact Us</h1>
+          <p className={styles.description}>Get in touch with us for any queries or feedback.</p>
+          <div className={styles.note}>
+            <p>Behind this Project</p>
+          </div>
           <form>
             <div>
               <label htmlFor="name">Name:</label>
@@ -59,6 +31,19 @@ const ContactUs = () => {
             </div>
             <button type="submit">Submit</button>
           </form>
+        </div>
+        <div className={styles.mapContainer}>
+          <iframe
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            scrolling="no"
+            marginHeight="0"
+            marginWidth="0"
+            src="https://www.google.com/maps/embed/v1/place?q=Bangladesh+University+of+Business+and+Technology,+Plot+77-78,+2+Road-9,+Dhaka+1216&key=AIzaSyAJ2yPXTikGr9pGPPjqEDmlDarg9fEIVR4"
+            allowFullScreen
+            title="Google Map"
+          ></iframe>
         </div>
       </div>
     </Layout>
