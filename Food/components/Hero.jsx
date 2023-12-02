@@ -45,9 +45,11 @@ export default function Hero() {
           <Image src={HeroImage} alt="" layout="intrinsic" />
         </div>
         <div className={css.ContactUs}>
+          <li>
           <Link href='/contactus'>
           <span>Contact Us</span>
           </Link>
+          </li>
           <div>
             <UilPhone color="white" />
           </div>
