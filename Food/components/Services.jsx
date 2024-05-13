@@ -33,14 +33,14 @@ export default function Services() {
             <Image src={s2} alt="" objectFit="cover" layout="intrinsic" />
           </div>
           
-          <span>Easy To Order</span>
+          <span>Fast Delivery</span>
           <span>Delivery that is always on time faster</span>
         </div>
         <div className={css.feature}>
         <div className={css.ImageWrapper}>
             <Image src={s3} alt="" objectFit="cover" layout="intrinsic" />
           </div>
-          <span>Easy To Order</span>
+          <span>Best Qualtiy</span>
           <span>Not only fast for us, quality is also number none</span>
 
             

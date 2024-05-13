@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'DeliveryApp',
 
   projectId: 'uti3i56z',
-  dataset: 'foodapp',
+  dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
 

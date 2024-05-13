@@ -8,6 +8,7 @@ import css from "../../styles/Order.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
 import Onway from "../../assets/onway.png";
+
 export const getServerSideProps = async ({ params }) => {
   const query = `*[_type == 'order' && _id == '${params.id}']`;
   const order = await client.fetch(query);
@@ -21,15 +22,12 @@ export const getServerSideProps = async ({ params }) => {
 
 export default function Orders({ order }) {
   useEffect(()=> {
-    if(order.status>3){
+    if(order.status > 3){
       localStorage.clear();
     }
-  },[order])
+  }, [order]);
 
-  
   return (
-
-
     <Layout>
       <div className={css.container}>
         <span className={css.heading}>Order in Process</span>
@@ -65,16 +63,6 @@ export default function Orders({ order }) {
         </div>
         <div className={css.statusContainer}>
           <div className={css.status}>
-            <UilBill width={50} height={50} />
-            <span>Payment</span>
-            {order.method === 0 ? (
-              <span className={css.pending}>On Delivery</span>
-            ) : (
-              <span className={css.completed}>Completed</span>
-            )}
-          </div>
-
-          <div className={css.status}>
             <Image src={Cooking} alt="" width={50} height={50} />
             <span>Cooking</span>
             {order.status === 1 && (
@@ -82,43 +70,44 @@ export default function Orders({ order }) {
                 <Image src={Spinner} alt="" width={85} height={85}/>
               </div>
             )}
-            {order.status> 1 && (
-              <span className={css.completed}> 
-              Completed
-
-              </span>
+            {order.status > 1 && (
+              <span className={css.completed}>Completed</span>
             )}
           </div>
 
           <div className={css.status}>
             <Image src={Onway} alt="" width={50} height={50} />
             <span>OnWay</span>
-
-            {order.status === 2 && (
+            {order.status == 2 && (
               <div className={css.spinner}>
                 <Image src={Spinner} alt="" width={85} height={85}/>
               </div>
             )}
-             {order.status> 2 && (
-              <span className={css.completed}> 
-              Completed
-
-              </span>
+            {order.status > 2 && (
+              <span className={css.completed}>Completed</span>
             )}
           </div>
 
           <div className={css.status}>
             <UilBox width={50} height={50} />
             <span>Delivered</span>
-            {order.status === 3 && (
+            {order.status == 3 && (
               <div className={css.spinner}>
                 <Image src={Spinner} alt="" width={85} height={85}/>
               </div>
             )}
-             {order.status> 3 && (
-              <span className={css.completed}> 
-              Completed
-              </span>
+            {order.status > 3 && (
+              <span className={css.completed}>Completed</span>
+            )}
+          </div>
+
+          <div className={css.status}>
+            <UilBill width={50} height={50} />
+            <span>Payment</span>
+            {order.status > 3 ? (
+              <span className={css.completed}>Completed</span>
+            ) : (
+              <span className={css.pending}> Waitting </span>
             )}
           </div>
         </div>

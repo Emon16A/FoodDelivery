@@ -31,39 +31,39 @@ export default function Hero() {
 </span>
 
 
-        <li>
         <Link href="/menu">
         <button className={`btn ${css.btn}`}>Get Started
-        </button>
+        </button>  
         </Link>
-        </li>
       </div>
 
       <div className={css.right}>
         <div className={css.imageContainer}>
-          <Image src={HeroImage} alt="" layout="intrinsic" />
+          <Image src={HeroImage} alt="" layout="intrinsic" width={1673} height={1800} />
         </div>
+        <Link href='/contactus'>
         <div className={css.ContactUs}>
-          <li>
-          <Link href='/contactus'>
           <span>Contact Us</span>
-          </Link>
-          </li>
+          
+          
           <div>
             <UilPhone color="white" />
           </div>
         </div>
+        </Link>
         <div className={css.Pizza}>
           <div>
+          <Link href="http://localhost:3000/pizza/italian-pizza">
             <Image src={Pizzal} alt="" objectFit="cover" layout="intrinsic" />
+            </Link>
           </div>
           <div className={css.details}>
-            <li>
+            
               <Link href="/menu">
               <span>Italian Pizza Large</span>
 
               </Link>
-            </li>
+          
 
             <span>
               <span style={{ color: "var(--themeRed)" }}>TK. </span>599

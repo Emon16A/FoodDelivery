@@ -8,16 +8,11 @@ import { urlFor } from "../lib/client";
 import { useStore } from "../store/store";
 import css from "../styles/Cart.module.css";
 
-
 export default function Cart() {
   const CartData = useStore((state) => state.cart);
   const removePizza = useStore((state) => state.removePizza);
   const [PaymentMethod, setPaymentMethod] = useState(null);
-  const [Order,setOrder] = useState(
-
-    typeof window !== 'undefined' && localStorage.getItem('order') 
-
-  )
+  const [Order, setOrder] = useState(typeof window !== 'undefined' && localStorage.getItem('order'));
   const router = useRouter();
 
   const handleRemove = (i) => {
@@ -25,7 +20,14 @@ export default function Cart() {
     toast.error('Food Removed');
   };
 
-  const total = () => CartData.pizzas.reduce((a, b) => a + b.quantity * b.price, 0);
+  const total = () => {
+    let totalAmount = CartData.pizzas.reduce((a, b) => a + b.quantity * b.price, 0);
+    // Add delivery charge if total is less than 1000
+    if (totalAmount < 1000) {
+      totalAmount += 50;
+    }
+    return totalAmount;
+  };
 
   const handleOnDelivery = () => {
     setPaymentMethod(0);
@@ -34,12 +36,8 @@ export default function Cart() {
 
   const handleCheckout = async () => {
     try {
-
       typeof window !== 'undefined' && localStorage.setItem('total', total());
-
-
       setPaymentMethod(1);
-
 
       const response = await fetch('/api/stripe', {
         method: 'POST',
@@ -54,7 +52,6 @@ export default function Cart() {
         toast.error('Error processing payment. Please try again.');
         return;
       }
-      
 
       const data = await response.json();
       toast.loading('Redirecting...');
@@ -130,29 +127,26 @@ export default function Cart() {
               <span>Items</span>
               <span>{CartData.pizzas.length}</span>
             </div>
-          <div>
-            <span>Total</span>
-            <span style={{ color: 'var(--themeRed)', fontWeight: 'bold' }}>TK.</span>
-
-            <span>{total()}</span>
+            <div>
+              <span>Total</span>
+              <span style={{ color: 'var(--themeRed)', fontWeight: 'bold' }}>TK.</span>
+              <span>{total()}</span>
+            </div>
           </div>
-
-          </div>
-
-          {!Order && CartData.pizzas.length > 0  ?
-          (
-            <div className={css.buttons}> <button className="btn" onClick={handleOnDelivery}>
-               Pay on Delivery</button>
-            <button className="btn" onClick={handleCheckout}>Pay Now
-            </button> </div> ) :null }
-       
+          {!Order && CartData.pizzas.length > 0 ? (
+            <div className={css.buttons}>
+              <button className="btn" onClick={handleOnDelivery}>
+                Pay on Delivery
+              </button>
+              <button className="btn" onClick={handleCheckout}>
+                Pay Now
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
       <Toaster />
-      
-      <OrderModal opened ={PaymentMethod === 0}
-      setOpened = {setPaymentMethod}
-      PaymentMethod = {PaymentMethod} />
+      <OrderModal opened={PaymentMethod === 0} setOpened={setPaymentMethod} PaymentMethod={PaymentMethod} />
     </Layout>
   );
 }

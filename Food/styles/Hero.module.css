@@ -50,8 +50,8 @@
 .imageContainer{
     width: 38rem;
     position: absolute;
-    top: -5rem;
-    left: -5rem;
+    top: -3rem;
+    left: 7rem;
 }
 .ContactUs{
     display: flex;
@@ -88,12 +88,13 @@
 .Pizza{
     display: flex;
     gap: 1rem;
+    
     background-color: white;
     box-shadow: var(--shadow);
     padding: 0.5rem;
     border-radius: 0.5rem;
     position: absolute;
-    bottom: 4rem;
+    bottom: -4rem;
     left: 19rem;
     width: max-content;
 
