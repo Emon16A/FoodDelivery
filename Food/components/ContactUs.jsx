@@ -11,10 +11,9 @@ const ContactUs = () => {
           <title>Contact Us</title>
         </Head>
         <div className={styles.formContainer}>
-        <h1 className={styles.title} style={{ textAlign: 'center' }}>Contact Us</h1>
+          <h1 className={styles.title} style={{ textAlign: 'center' }}>Contact Us</h1>
           <p className={styles.description}>Get in touch with us for any queries or feedback.</p>
-          <div className={styles.note}>
-          </div>
+          <div className={styles.note}></div>
           <form>
             <div>
               <label htmlFor="name">Name:</label>
@@ -30,6 +29,16 @@ const ContactUs = () => {
             </div>
             <button type="submit">Submit</button>
           </form>
+        </div>
+        <div className={styles.photosContainer}>
+          <div className={styles.photoItem}>
+            <img src="/images/am.jpg" alt="Photo 1" id="photo1" className={styles.photo} />
+            <p className={styles.photoName}>Photo 1</p>
+          </div>
+          <div className={styles.photoItem}>
+            <img src="/images/Em.jpg" alt="Photo 2" id="photo2" className={styles.photo} />
+            <p className={styles.photoName}>Photo 2</p>
+          </div>
         </div>
         <div className={styles.mapContainer}>
           <iframe
