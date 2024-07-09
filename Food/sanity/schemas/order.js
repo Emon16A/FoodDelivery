@@ -44,7 +44,7 @@ export default {
         type: 'string',
         options: {
           list: [
-            { title: 'Cooking', value: '1' }
+            { title: 'Cooking', value: '1' },
             { title: 'OnWay', value: '2' },
             { title: 'Delivered', value: '3' },
             { title: 'Payment', value: '4' }
