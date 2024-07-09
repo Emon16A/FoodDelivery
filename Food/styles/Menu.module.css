@@ -91,7 +91,18 @@
     }
 
     .menu {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+
+    .pizza {
+        flex: 0 0 auto;
+        margin-right: 1rem;
     }
 }
