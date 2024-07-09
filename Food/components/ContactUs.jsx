@@ -1,6 +1,7 @@
 // ContactUs.js
 import Head from 'next/head';
 import Layout from '../components/Layout';
+
 import styles from '../styles/contactUs.module.css';
 
 const ContactUs = () => {
@@ -32,11 +33,11 @@ const ContactUs = () => {
         </div>
         <div className={styles.photosContainer}>
           <div className={styles.photoItem}>
-            <img src="/images/am.jpg" alt="Photo 1" id="photo1" className={styles.photo} />
+            <img src="am.jpg" alt="Photo 1" id="photo1" className={styles.photo} />
             <p className={styles.photoName}>Photo 1</p>
           </div>
           <div className={styles.photoItem}>
-            <img src="/images/Em.jpg" alt="Photo 2" id="photo2" className={styles.photo} />
+            <img src="Em.jpg" alt="Photo 2" id="photo2" className={styles.photo} />
             <p className={styles.photoName}>Photo 2</p>
           </div>
         </div>
