@@ -42,7 +42,7 @@ export default function Header() {
 </li>
         </Link>
     <Link  href = "/contactus">
-    <li>Conatact</li>
+    <li>Contact</li>
     </Link>
        
       </ul>

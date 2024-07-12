@@ -1,7 +1,8 @@
-// ContactUs.js
 import Head from 'next/head';
+import Image from "next/image";
+import Emon from "../assets/Em.jpg";
+import Sakib from "../assets/sk.png";
 import Layout from '../components/Layout';
-
 import styles from '../styles/contactUs.module.css';
 
 const ContactUs = () => {
@@ -11,49 +12,38 @@ const ContactUs = () => {
         <Head>
           <title>Contact Us</title>
         </Head>
-        <div className={styles.formContainer}>
-          <h1 className={styles.title} style={{ textAlign: 'center' }}>Contact Us</h1>
-          <p className={styles.description}>Get in touch with us for any queries or feedback.</p>
-          <div className={styles.note}></div>
-          <form>
-            <div>
-              <label htmlFor="name">Name:</label>
-              <input type="text" id="name" name="name" />
-            </div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" />
-            </div>
-            <div>
-              <label htmlFor="message">Message:</label>
-              <textarea id="message" name="message" rows="4" />
-            </div>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-        <div className={styles.photosContainer}>
-          <div className={styles.photoItem}>
-            <img src="am.jpg" alt="Photo 1" id="photo1" className={styles.photo} />
-            <p className={styles.photoName}>Photo 1</p>
+        <h1 className={styles.title}>Contact Us</h1>
+        <p className={styles.description}>Get in touch with us for any queries or feedback.</p>
+        <h2 className={styles.subTitle} >Behind this Project</h2>
+        <div className={styles.teamContainer}>
+          <div className={styles.teamMember}>
+          <Image src={Sakib} alt="Kazi Sakib Hossain" className={styles.teamPhoto} />
+          <p className={styles.teamName}>Name: Kazi Sakib Hossain</p>
+            <p className={styles.teamId}>ID: 20215456128</p>
           </div>
-          <div className={styles.photoItem}>
-            <img src="Em.jpg" alt="Photo 2" id="photo2" className={styles.photo} />
-            <p className={styles.photoName}>Photo 2</p>
+          <div className={styles.teamMember}>
+            <Image src={Emon} alt="S.I.Emon" className={styles.teamPhoto} />
+            <p className={styles.teamName}>Name: S.I.Emon</p>
+            <p className={styles.teamId}>ID: 20215456122</p>
           </div>
+    
         </div>
-        <div className={styles.mapContainer}>
-          <iframe
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.224561674789!2d90.41270831548117!3d23.806348084563325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c71f69fc1997%3A0x40e3e388686a035!2sBangladesh%20University%20of%20Business%20and%20Technology%20(BUBT)!5e0!3m2!1sen!2sus!4v1666016030478!5m2!1sen!2sus"
-            allowFullScreen
-            title="Google Map"
-          ></iframe>
-        </div>
+        <form className={styles.form}>
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div>
+            <label htmlFor="message">Message:</label>
+            <textarea id="message" name="message" rows="4" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        
       </div>
     </Layout>
   );
