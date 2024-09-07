@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from "next/image";
 import Emon from "../assets/Em.jpg";
-import Sakib from "../assets/sk.png";
 import Layout from '../components/Layout';
 import styles from '../styles/contactUs.module.css';
 
@@ -16,11 +15,7 @@ const ContactUs = () => {
         <p className={styles.description}>Get in touch with us for any queries or feedback.</p>
         <h2 className={styles.subTitle} >Behind this Project</h2>
         <div className={styles.teamContainer}>
-          <div className={styles.teamMember}>
-          <Image src={Sakib} alt="Kazi Sakib Hossain" className={styles.teamPhoto} />
-          <p className={styles.teamName}>Name: Kazi Sakib Hossain</p>
-            <p className={styles.teamId}>ID: 20215456128</p>
-          </div>
+        
           <div className={styles.teamMember}>
             <Image src={Emon} alt="S.I.Emon" className={styles.teamPhoto} />
             <p className={styles.teamName}>Name: S.I.Emon</p>
