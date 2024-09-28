@@ -7,9 +7,7 @@ import css from "../styles/Footer.module.css";
 export default function Footer() {
   return (
     <div className={css.container}>
-      <span>FNC DEVPLOPERS</span>
-      <span>City University</span>
-
+      <span>BLACK BAT DEVPLOPERS</span>
       <div className={css.social}>
         <UilFacebook size={45} />
         <UilGithub size={45} />
