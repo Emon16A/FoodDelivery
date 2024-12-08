@@ -2,12 +2,13 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 
 import styles from '../styles/contactUs.module.css';
-
+//contact
 const ContactUs = () => {
   return (
     <Layout>
       <div className={styles.container}>
         <Head>
+
           <title>Contact Us</title>
         </Head>
         <h1 className={styles.title}>Contact Us</h1>
