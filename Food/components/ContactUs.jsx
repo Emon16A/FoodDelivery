@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 
 import styles from '../styles/contactUs.module.css';
-//contact
 const ContactUs = () => {
   return (
     <Layout>
